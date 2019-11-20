@@ -13,5 +13,11 @@ namespace Trabalho_4 {
         public frmAcademico() {
             InitializeComponent();
         }
+
+        private void incluirToolStripMenuItem_Click_1(object sender, EventArgs e) {
+            frmAlunoIncluir incluirAluno = new frmAlunoIncluir();
+            incluirAluno.MdiParent = this;
+            incluirAluno.Show();
+        }
     }
 }

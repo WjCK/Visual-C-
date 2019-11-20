@@ -14,5 +14,12 @@ namespace Trabalho_4 {
             InitializeComponent();
         }
 
+        private void btnFechar_Click(object sender, EventArgs e) {
+            foreach(Control c in Controls) {
+                if(c is TextBox) {
+                    c.Text = "";
+                }
+            }
+        }
     }
 }

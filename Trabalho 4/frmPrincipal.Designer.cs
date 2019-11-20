@@ -25,13 +25,13 @@
         private void InitializeComponent() {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.alunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarConsultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,29 +59,12 @@
             this.alunoToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.alunoToolStripMenuItem.Text = "Aluno";
             // 
-            // cursoToolStripMenuItem
-            // 
-            this.cursoToolStripMenuItem.Name = "cursoToolStripMenuItem";
-            this.cursoToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.cursoToolStripMenuItem.Text = "Curso";
-            // 
-            // sobreToolStripMenuItem
-            // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
             // incluirToolStripMenuItem
             // 
             this.incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
             this.incluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.incluirToolStripMenuItem.Text = "Incluir";
+            this.incluirToolStripMenuItem.Click += new System.EventHandler(this.incluirToolStripMenuItem_Click_1);
             // 
             // alterarToolStripMenuItem
             // 
@@ -100,6 +83,24 @@
             this.pesquisarConsultarToolStripMenuItem.Name = "pesquisarConsultarToolStripMenuItem";
             this.pesquisarConsultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pesquisarConsultarToolStripMenuItem.Text = "Pesquisar/Consultar";
+            // 
+            // cursoToolStripMenuItem
+            // 
+            this.cursoToolStripMenuItem.Name = "cursoToolStripMenuItem";
+            this.cursoToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.cursoToolStripMenuItem.Text = "Curso";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Text = "Sair";
             // 
             // frmAcademico
             // 
