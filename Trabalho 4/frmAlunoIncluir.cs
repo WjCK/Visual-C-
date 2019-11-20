@@ -15,8 +15,12 @@ namespace Trabalho_4 {
         }
 
         private void btnFechar_Click(object sender, EventArgs e) {
-            foreach(Control c in Controls) {
-                if(c is TextBox) {
+            this.Close();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e) {
+            foreach (Control c in Controls) {
+                if (c is TextBox) {
                     c.Text = "";
                 }
             }
