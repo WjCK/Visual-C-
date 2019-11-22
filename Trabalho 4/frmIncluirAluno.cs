@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroSet_UI.Forms;
 
 namespace Trabalho_4 {
-    public partial class frmAlunoIncluir : Form {
-        public frmAlunoIncluir() {
+    public partial class frmIncluirAluno : Form {
+        public frmIncluirAluno() {
             InitializeComponent();
         }
 
@@ -24,6 +25,13 @@ namespace Trabalho_4 {
                     c.Text = "";
                 }
             }
+            cmbSexo.Text = String.Empty;
+            cmbEstado.Text = String.Empty;
+            cmbCurso.Text = String.Empty;
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e) {
+
         }
     }
 }

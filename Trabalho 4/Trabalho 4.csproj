@@ -49,17 +49,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAlunoIncluir.cs">
+    <Compile Include="frmAlterarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlunoIncluir.Designer.cs">
-      <DependentUpon>frmAlunoIncluir.cs</DependentUpon>
+    <Compile Include="frmAlterarAluno.Designer.cs">
+      <DependentUpon>frmAlterarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlterarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterarCurso.Designer.cs">
+      <DependentUpon>frmAlterarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarCurso.Designer.cs">
+      <DependentUpon>frmConsultarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExcluirCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExcluirCurso.Designer.cs">
+      <DependentUpon>frmExcluirCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIncluirAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIncluirAluno.Designer.cs">
+      <DependentUpon>frmIncluirAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarAluno.Designer.cs">
+      <DependentUpon>frmConsultarAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="frmExcluirAluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmExcluirAluno.Designer.cs">
       <DependentUpon>frmExcluirAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIncluirCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIncluirCurso.Designer.cs">
+      <DependentUpon>frmIncluirCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -69,8 +105,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAlunoIncluir.resx">
-      <DependentUpon>frmAlunoIncluir.cs</DependentUpon>
+    <EmbeddedResource Include="frmAlterarAluno.resx">
+      <DependentUpon>frmAlterarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlterarCurso.resx">
+      <DependentUpon>frmAlterarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarCurso.resx">
+      <DependentUpon>frmConsultarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExcluirCurso.resx">
+      <DependentUpon>frmExcluirCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIncluirAluno.resx">
+      <DependentUpon>frmIncluirAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarAluno.resx">
+      <DependentUpon>frmConsultarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExcluirAluno.resx">
+      <DependentUpon>frmExcluirAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIncluirCurso.resx">
+      <DependentUpon>frmIncluirCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
