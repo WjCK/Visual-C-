@@ -13,5 +13,13 @@ namespace Trabalho_4 {
         public frmIncluirCurso() {
             InitializeComponent();
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e) {
+            foreach(Control c in Controls) {
+                if(c is TextBox) {
+                    c.Text = "";
+                }
+            }
+        }
     }
 }
