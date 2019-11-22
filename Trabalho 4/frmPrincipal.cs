@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
 
 namespace Trabalho_4 {
@@ -13,7 +7,7 @@ namespace Trabalho_4 {
         public frmAcademico() {
             InitializeComponent();
         }
-
+        
         private void incluirToolStripMenuItem_Click_1(object sender, EventArgs e) {
             frmIncluirAluno incluirAluno = new frmIncluirAluno();
             incluirAluno.MdiParent = this;
@@ -48,12 +42,12 @@ namespace Trabalho_4 {
                 "Disciplina: Ferramentas Visuais de Desenvolvimento de Software\n\n" +
                 "Professor: Elias Ferreira\n\n" +
                 "Alunos: Welder Novaes e Pedro Soares\n\n" +
-                "Versão: 0.4\n\n" +
-                "Desenvolvido em: 11/2019" + MessageBoxButtons.OK + MessageBoxIcon.Information);
+                "Versão: 0.5\n\n" +
+                "Desenvolvido em: 11/2019","Sobre",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e) {
-            this.Close();
+            Close();
         }
 
         private void incluirToolStripMenuItem1_Click(object sender, EventArgs e) {
@@ -78,6 +72,33 @@ namespace Trabalho_4 {
             frmConsultarCurso consultarCurso = new frmConsultarCurso();
             consultarCurso.MdiParent = this;
             consultarCurso.Show();
+        }
+
+        private void metroDefaultSetButton1_Click(object sender, EventArgs e) {
+            if (abrirConexao(txtBanco.Text,txtUsuario.Text,txtSenha.Text)) {
+                menuPrincipal.Visible = true;
+                foreach (Control c in Controls) {
+                    if (c is MetroSet_UI.Controls.MetroSetTextBox || c is Label || c is MetroSet_UI.Controls.MetroDefaultSetButton) { 
+                        c.Visible = false;
+                    }
+                }
+                MessageBox.Show("Conexão realizada com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            } else {
+                MessageBox.Show("Conexão não realizada!");
+            }
+        }
+        private Boolean abrirConexao(String database, String uid, String pwd) {
+            String caminho = "server=localhost;" +
+                "database=" + database + ";" +
+                "uid=" + uid + ";" +
+                "pwd=" + pwd + ";";
+            Session.Instance.conexao = new MySqlConnection(caminho);
+            try {
+                Session.Instance.conexao.Open();
+                return true;
+            } catch (Exception) {
+                return false;
+            }
         }
     }
 }

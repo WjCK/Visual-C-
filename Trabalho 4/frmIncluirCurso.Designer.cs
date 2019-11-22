@@ -27,44 +27,44 @@
             this.lblNomeCurso = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
             this.txtNomeCurso = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.txtAreaCurso = new MetroSet_UI.Controls.MetroSetTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPrecoCurso = new MetroSet_UI.Controls.MetroSetTextBox();
             this.btnSalvarCurso = new MetroSet_UI.Controls.MetroSetButton();
             this.btnCancelar = new MetroSet_UI.Controls.MetroSetButton();
             this.btnLimpar = new MetroSet_UI.Controls.MetroSetButton();
+            this.cmbArea = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblTituloIncluirCurso
             // 
             this.lblTituloIncluirCurso.AutoSize = true;
-            this.lblTituloIncluirCurso.Font = new System.Drawing.Font("Muli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloIncluirCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloIncluirCurso.ForeColor = System.Drawing.Color.White;
             this.lblTituloIncluirCurso.Location = new System.Drawing.Point(332, 9);
             this.lblTituloIncluirCurso.Name = "lblTituloIncluirCurso";
-            this.lblTituloIncluirCurso.Size = new System.Drawing.Size(156, 35);
+            this.lblTituloIncluirCurso.Size = new System.Drawing.Size(147, 29);
             this.lblTituloIncluirCurso.TabIndex = 0;
             this.lblTituloIncluirCurso.Text = "Incluir Curso";
             // 
             // lblNomeCurso
             // 
             this.lblNomeCurso.AutoSize = true;
-            this.lblNomeCurso.Font = new System.Drawing.Font("Muli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeCurso.ForeColor = System.Drawing.Color.White;
             this.lblNomeCurso.Location = new System.Drawing.Point(242, 87);
             this.lblNomeCurso.Name = "lblNomeCurso";
-            this.lblNomeCurso.Size = new System.Drawing.Size(132, 24);
+            this.lblNomeCurso.Size = new System.Drawing.Size(120, 20);
             this.lblNomeCurso.TabIndex = 1;
             this.lblNomeCurso.Text = "Nome do curso:";
             // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Font = new System.Drawing.Font("Muli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArea.ForeColor = System.Drawing.Color.White;
             this.lblArea.Location = new System.Drawing.Point(242, 161);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(122, 24);
+            this.lblArea.Size = new System.Drawing.Size(112, 20);
             this.lblArea.TabIndex = 2;
             this.lblArea.Text = "Area do curso:";
             // 
@@ -96,42 +96,14 @@
             this.txtNomeCurso.UseSystemPasswordChar = false;
             this.txtNomeCurso.WatermarkText = "";
             // 
-            // txtAreaCurso
-            // 
-            this.txtAreaCurso.AutoCompleteCustomSource = null;
-            this.txtAreaCurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtAreaCurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtAreaCurso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.txtAreaCurso.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtAreaCurso.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtAreaCurso.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtAreaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtAreaCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtAreaCurso.Image = null;
-            this.txtAreaCurso.Lines = null;
-            this.txtAreaCurso.Location = new System.Drawing.Point(380, 161);
-            this.txtAreaCurso.MaxLength = 32767;
-            this.txtAreaCurso.Multiline = false;
-            this.txtAreaCurso.Name = "txtAreaCurso";
-            this.txtAreaCurso.ReadOnly = false;
-            this.txtAreaCurso.Size = new System.Drawing.Size(135, 28);
-            this.txtAreaCurso.Style = MetroSet_UI.Design.Style.Dark;
-            this.txtAreaCurso.StyleManager = null;
-            this.txtAreaCurso.TabIndex = 4;
-            this.txtAreaCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtAreaCurso.ThemeAuthor = "Narwin";
-            this.txtAreaCurso.ThemeName = "MetroDark";
-            this.txtAreaCurso.UseSystemPasswordChar = false;
-            this.txtAreaCurso.WatermarkText = "";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Muli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(242, 229);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Preço do curso:";
             // 
@@ -187,6 +159,7 @@
             this.btnSalvarCurso.Text = "Salvar";
             this.btnSalvarCurso.ThemeAuthor = "Narwin";
             this.btnSalvarCurso.ThemeName = "MetroDark";
+            this.btnSalvarCurso.Click += new System.EventHandler(this.btnSalvarCurso_Click);
             // 
             // btnCancelar
             // 
@@ -239,18 +212,33 @@
             this.btnLimpar.ThemeName = "MetroDark";
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // cmbArea
+            // 
+            this.cmbArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.cmbArea.ForeColor = System.Drawing.Color.White;
+            this.cmbArea.FormattingEnabled = true;
+            this.cmbArea.Items.AddRange(new object[] {
+            "",
+            "Exatas",
+            "Humanas",
+            "Biologicas"});
+            this.cmbArea.Location = new System.Drawing.Point(380, 163);
+            this.cmbArea.Name = "cmbArea";
+            this.cmbArea.Size = new System.Drawing.Size(135, 21);
+            this.cmbArea.TabIndex = 39;
+            // 
             // frmIncluirCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbArea);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvarCurso);
             this.Controls.Add(this.txtPrecoCurso);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtAreaCurso);
             this.Controls.Add(this.txtNomeCurso);
             this.Controls.Add(this.lblArea);
             this.Controls.Add(this.lblNomeCurso);
@@ -268,11 +256,11 @@
         private System.Windows.Forms.Label lblNomeCurso;
         private System.Windows.Forms.Label lblArea;
         private MetroSet_UI.Controls.MetroSetTextBox txtNomeCurso;
-        private MetroSet_UI.Controls.MetroSetTextBox txtAreaCurso;
         private System.Windows.Forms.Label label1;
         private MetroSet_UI.Controls.MetroSetTextBox txtPrecoCurso;
         private MetroSet_UI.Controls.MetroSetButton btnSalvarCurso;
         private MetroSet_UI.Controls.MetroSetButton btnCancelar;
         private MetroSet_UI.Controls.MetroSetButton btnLimpar;
+        private System.Windows.Forms.ComboBox cmbArea;
     }
 }
