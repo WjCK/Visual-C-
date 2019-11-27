@@ -29,20 +29,20 @@
             this.lblTextIncluirAluno = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblNome = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblSexo = new MetroSet_UI.Controls.MetroSetLabel();
-            this.txtNome = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.editNome = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblLogradouro = new MetroSet_UI.Controls.MetroSetLabel();
-            this.txtLogradouro = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.editLogradouro = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblNumero = new MetroSet_UI.Controls.MetroSetLabel();
-            this.txtNumero = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.editNumero = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblSetor = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblCidade = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblEstado = new MetroSet_UI.Controls.MetroSetLabel();
-            this.txtSetor = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.txtCidade = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.editSetor = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.editCidade = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblCurso = new MetroSet_UI.Controls.MetroSetLabel();
-            this.cmbSexo = new System.Windows.Forms.ComboBox();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.editCodigoCurso = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.cmbSexo = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.cmbEstado = new MetroSet_UI.Controls.MetroSetComboBox();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -51,10 +51,10 @@
             this.btnSalvar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnSalvar.DisabledForeColor = System.Drawing.Color.Gray;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSalvar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnSalvar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnSalvar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnSalvar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnSalvar.HoverTextColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(101, 461);
+            this.btnSalvar.Location = new System.Drawing.Point(105, 508);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnSalvar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
@@ -77,10 +77,10 @@
             this.btnLimpar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnLimpar.DisabledForeColor = System.Drawing.Color.Gray;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnLimpar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnLimpar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnLimpar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnLimpar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnLimpar.HoverTextColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(313, 461);
+            this.btnLimpar.Location = new System.Drawing.Point(317, 508);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnLimpar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
@@ -103,10 +103,10 @@
             this.btnFechar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnFechar.DisabledForeColor = System.Drawing.Color.Gray;
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnFechar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.btnFechar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.btnFechar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnFechar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnFechar.HoverTextColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(528, 461);
+            this.btnFechar.Location = new System.Drawing.Point(532, 508);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnFechar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
@@ -152,7 +152,7 @@
             // lblSexo
             // 
             this.lblSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(490, 72);
+            this.lblSexo.Location = new System.Drawing.Point(323, 72);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(58, 23);
             this.lblSexo.Style = MetroSet_UI.Design.Style.Dark;
@@ -162,38 +162,38 @@
             this.lblSexo.ThemeAuthor = "Narwin";
             this.lblSexo.ThemeName = "MetroDark";
             // 
-            // txtNome
+            // editNome
             // 
-            this.txtNome.AutoCompleteCustomSource = null;
-            this.txtNome.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtNome.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.txtNome.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtNome.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNome.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNome.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtNome.Image = null;
-            this.txtNome.Lines = null;
-            this.txtNome.Location = new System.Drawing.Point(48, 98);
-            this.txtNome.MaxLength = 32767;
-            this.txtNome.Multiline = false;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.ReadOnly = false;
-            this.txtNome.Size = new System.Drawing.Size(196, 25);
-            this.txtNome.Style = MetroSet_UI.Design.Style.Dark;
-            this.txtNome.StyleManager = null;
-            this.txtNome.TabIndex = 22;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNome.ThemeAuthor = "Narwin";
-            this.txtNome.ThemeName = "MetroDark";
-            this.txtNome.UseSystemPasswordChar = false;
-            this.txtNome.WatermarkText = "";
+            this.editNome.AutoCompleteCustomSource = null;
+            this.editNome.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.editNome.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.editNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.editNome.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.editNome.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editNome.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.editNome.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.editNome.Image = null;
+            this.editNome.Lines = null;
+            this.editNome.Location = new System.Drawing.Point(48, 98);
+            this.editNome.MaxLength = 32767;
+            this.editNome.Multiline = false;
+            this.editNome.Name = "editNome";
+            this.editNome.ReadOnly = false;
+            this.editNome.Size = new System.Drawing.Size(231, 25);
+            this.editNome.Style = MetroSet_UI.Design.Style.Dark;
+            this.editNome.StyleManager = null;
+            this.editNome.TabIndex = 22;
+            this.editNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.editNome.ThemeAuthor = "Narwin";
+            this.editNome.ThemeName = "MetroDark";
+            this.editNome.UseSystemPasswordChar = false;
+            this.editNome.WatermarkText = "";
             // 
             // lblLogradouro
             // 
             this.lblLogradouro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogradouro.Location = new System.Drawing.Point(48, 161);
+            this.lblLogradouro.Location = new System.Drawing.Point(48, 152);
             this.lblLogradouro.Name = "lblLogradouro";
             this.lblLogradouro.Size = new System.Drawing.Size(105, 23);
             this.lblLogradouro.Style = MetroSet_UI.Design.Style.Dark;
@@ -203,38 +203,38 @@
             this.lblLogradouro.ThemeAuthor = "Narwin";
             this.lblLogradouro.ThemeName = "MetroDark";
             // 
-            // txtLogradouro
+            // editLogradouro
             // 
-            this.txtLogradouro.AutoCompleteCustomSource = null;
-            this.txtLogradouro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtLogradouro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtLogradouro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.txtLogradouro.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtLogradouro.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtLogradouro.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtLogradouro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtLogradouro.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtLogradouro.Image = null;
-            this.txtLogradouro.Lines = null;
-            this.txtLogradouro.Location = new System.Drawing.Point(48, 187);
-            this.txtLogradouro.MaxLength = 32767;
-            this.txtLogradouro.Multiline = false;
-            this.txtLogradouro.Name = "txtLogradouro";
-            this.txtLogradouro.ReadOnly = false;
-            this.txtLogradouro.Size = new System.Drawing.Size(196, 25);
-            this.txtLogradouro.Style = MetroSet_UI.Design.Style.Dark;
-            this.txtLogradouro.StyleManager = null;
-            this.txtLogradouro.TabIndex = 25;
-            this.txtLogradouro.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtLogradouro.ThemeAuthor = "Narwin";
-            this.txtLogradouro.ThemeName = "MetroDark";
-            this.txtLogradouro.UseSystemPasswordChar = false;
-            this.txtLogradouro.WatermarkText = "";
+            this.editLogradouro.AutoCompleteCustomSource = null;
+            this.editLogradouro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.editLogradouro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.editLogradouro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.editLogradouro.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.editLogradouro.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editLogradouro.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editLogradouro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.editLogradouro.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.editLogradouro.Image = null;
+            this.editLogradouro.Lines = null;
+            this.editLogradouro.Location = new System.Drawing.Point(48, 178);
+            this.editLogradouro.MaxLength = 32767;
+            this.editLogradouro.Multiline = false;
+            this.editLogradouro.Name = "editLogradouro";
+            this.editLogradouro.ReadOnly = false;
+            this.editLogradouro.Size = new System.Drawing.Size(231, 25);
+            this.editLogradouro.Style = MetroSet_UI.Design.Style.Dark;
+            this.editLogradouro.StyleManager = null;
+            this.editLogradouro.TabIndex = 25;
+            this.editLogradouro.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.editLogradouro.ThemeAuthor = "Narwin";
+            this.editLogradouro.ThemeName = "MetroDark";
+            this.editLogradouro.UseSystemPasswordChar = false;
+            this.editLogradouro.WatermarkText = "";
             // 
             // lblNumero
             // 
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(490, 161);
+            this.lblNumero.Location = new System.Drawing.Point(323, 152);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(82, 23);
             this.lblNumero.Style = MetroSet_UI.Design.Style.Dark;
@@ -244,38 +244,38 @@
             this.lblNumero.ThemeAuthor = "Narwin";
             this.lblNumero.ThemeName = "MetroDark";
             // 
-            // txtNumero
+            // editNumero
             // 
-            this.txtNumero.AutoCompleteCustomSource = null;
-            this.txtNumero.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtNumero.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtNumero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.txtNumero.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtNumero.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNumero.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNumero.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtNumero.Image = null;
-            this.txtNumero.Lines = null;
-            this.txtNumero.Location = new System.Drawing.Point(490, 187);
-            this.txtNumero.MaxLength = 32767;
-            this.txtNumero.Multiline = false;
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.ReadOnly = false;
-            this.txtNumero.Size = new System.Drawing.Size(82, 25);
-            this.txtNumero.Style = MetroSet_UI.Design.Style.Dark;
-            this.txtNumero.StyleManager = null;
-            this.txtNumero.TabIndex = 27;
-            this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNumero.ThemeAuthor = "Narwin";
-            this.txtNumero.ThemeName = "MetroDark";
-            this.txtNumero.UseSystemPasswordChar = false;
-            this.txtNumero.WatermarkText = "";
+            this.editNumero.AutoCompleteCustomSource = null;
+            this.editNumero.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.editNumero.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.editNumero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.editNumero.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.editNumero.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editNumero.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.editNumero.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.editNumero.Image = null;
+            this.editNumero.Lines = null;
+            this.editNumero.Location = new System.Drawing.Point(323, 178);
+            this.editNumero.MaxLength = 32767;
+            this.editNumero.Multiline = false;
+            this.editNumero.Name = "editNumero";
+            this.editNumero.ReadOnly = false;
+            this.editNumero.Size = new System.Drawing.Size(121, 25);
+            this.editNumero.Style = MetroSet_UI.Design.Style.Dark;
+            this.editNumero.StyleManager = null;
+            this.editNumero.TabIndex = 27;
+            this.editNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.editNumero.ThemeAuthor = "Narwin";
+            this.editNumero.ThemeName = "MetroDark";
+            this.editNumero.UseSystemPasswordChar = false;
+            this.editNumero.WatermarkText = "";
             // 
             // lblSetor
             // 
             this.lblSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetor.Location = new System.Drawing.Point(48, 254);
+            this.lblSetor.Location = new System.Drawing.Point(48, 230);
             this.lblSetor.Name = "lblSetor";
             this.lblSetor.Size = new System.Drawing.Size(58, 23);
             this.lblSetor.Style = MetroSet_UI.Design.Style.Dark;
@@ -288,7 +288,7 @@
             // lblCidade
             // 
             this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCidade.Location = new System.Drawing.Point(283, 254);
+            this.lblCidade.Location = new System.Drawing.Point(48, 312);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(83, 23);
             this.lblCidade.Style = MetroSet_UI.Design.Style.Dark;
@@ -301,7 +301,7 @@
             // lblEstado
             // 
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(490, 254);
+            this.lblEstado.Location = new System.Drawing.Point(323, 230);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(67, 23);
             this.lblEstado.Style = MetroSet_UI.Design.Style.Dark;
@@ -311,135 +311,187 @@
             this.lblEstado.ThemeAuthor = "Narwin";
             this.lblEstado.ThemeName = "MetroDark";
             // 
-            // txtSetor
+            // editSetor
             // 
-            this.txtSetor.AutoCompleteCustomSource = null;
-            this.txtSetor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtSetor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtSetor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.txtSetor.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtSetor.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSetor.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSetor.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtSetor.Image = null;
-            this.txtSetor.Lines = null;
-            this.txtSetor.Location = new System.Drawing.Point(48, 280);
-            this.txtSetor.MaxLength = 32767;
-            this.txtSetor.Multiline = false;
-            this.txtSetor.Name = "txtSetor";
-            this.txtSetor.ReadOnly = false;
-            this.txtSetor.Size = new System.Drawing.Size(136, 25);
-            this.txtSetor.Style = MetroSet_UI.Design.Style.Dark;
-            this.txtSetor.StyleManager = null;
-            this.txtSetor.TabIndex = 31;
-            this.txtSetor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSetor.ThemeAuthor = "Narwin";
-            this.txtSetor.ThemeName = "MetroDark";
-            this.txtSetor.UseSystemPasswordChar = false;
-            this.txtSetor.WatermarkText = "";
+            this.editSetor.AutoCompleteCustomSource = null;
+            this.editSetor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.editSetor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.editSetor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.editSetor.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.editSetor.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editSetor.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.editSetor.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.editSetor.Image = null;
+            this.editSetor.Lines = null;
+            this.editSetor.Location = new System.Drawing.Point(48, 256);
+            this.editSetor.MaxLength = 32767;
+            this.editSetor.Multiline = false;
+            this.editSetor.Name = "editSetor";
+            this.editSetor.ReadOnly = false;
+            this.editSetor.Size = new System.Drawing.Size(231, 25);
+            this.editSetor.Style = MetroSet_UI.Design.Style.Dark;
+            this.editSetor.StyleManager = null;
+            this.editSetor.TabIndex = 31;
+            this.editSetor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.editSetor.ThemeAuthor = "Narwin";
+            this.editSetor.ThemeName = "MetroDark";
+            this.editSetor.UseSystemPasswordChar = false;
+            this.editSetor.WatermarkText = "";
             // 
-            // txtCidade
+            // editCidade
             // 
-            this.txtCidade.AutoCompleteCustomSource = null;
-            this.txtCidade.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtCidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtCidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.txtCidade.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtCidade.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCidade.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtCidade.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtCidade.Image = null;
-            this.txtCidade.Lines = null;
-            this.txtCidade.Location = new System.Drawing.Point(283, 280);
-            this.txtCidade.MaxLength = 32767;
-            this.txtCidade.Multiline = false;
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.ReadOnly = false;
-            this.txtCidade.Size = new System.Drawing.Size(136, 25);
-            this.txtCidade.Style = MetroSet_UI.Design.Style.Dark;
-            this.txtCidade.StyleManager = null;
-            this.txtCidade.TabIndex = 32;
-            this.txtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCidade.ThemeAuthor = "Narwin";
-            this.txtCidade.ThemeName = "MetroDark";
-            this.txtCidade.UseSystemPasswordChar = false;
-            this.txtCidade.WatermarkText = "";
+            this.editCidade.AutoCompleteCustomSource = null;
+            this.editCidade.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.editCidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.editCidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.editCidade.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.editCidade.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editCidade.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.editCidade.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.editCidade.Image = null;
+            this.editCidade.Lines = null;
+            this.editCidade.Location = new System.Drawing.Point(48, 338);
+            this.editCidade.MaxLength = 32767;
+            this.editCidade.Multiline = false;
+            this.editCidade.Name = "editCidade";
+            this.editCidade.ReadOnly = false;
+            this.editCidade.Size = new System.Drawing.Size(231, 25);
+            this.editCidade.Style = MetroSet_UI.Design.Style.Dark;
+            this.editCidade.StyleManager = null;
+            this.editCidade.TabIndex = 32;
+            this.editCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.editCidade.ThemeAuthor = "Narwin";
+            this.editCidade.ThemeName = "MetroDark";
+            this.editCidade.UseSystemPasswordChar = false;
+            this.editCidade.WatermarkText = "";
             // 
             // lblCurso
             // 
             this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(48, 343);
+            this.lblCurso.Location = new System.Drawing.Point(48, 394);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(58, 23);
+            this.lblCurso.Size = new System.Drawing.Size(136, 23);
             this.lblCurso.Style = MetroSet_UI.Design.Style.Dark;
             this.lblCurso.StyleManager = null;
             this.lblCurso.TabIndex = 34;
-            this.lblCurso.Text = "Curso";
+            this.lblCurso.Text = "Código do curso";
             this.lblCurso.ThemeAuthor = "Narwin";
             this.lblCurso.ThemeName = "MetroDark";
             // 
+            // editCodigoCurso
+            // 
+            this.editCodigoCurso.AutoCompleteCustomSource = null;
+            this.editCodigoCurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.editCodigoCurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.editCodigoCurso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.editCodigoCurso.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.editCodigoCurso.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editCodigoCurso.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editCodigoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.editCodigoCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.editCodigoCurso.Image = null;
+            this.editCodigoCurso.Lines = null;
+            this.editCodigoCurso.Location = new System.Drawing.Point(48, 420);
+            this.editCodigoCurso.MaxLength = 32767;
+            this.editCodigoCurso.Multiline = false;
+            this.editCodigoCurso.Name = "editCodigoCurso";
+            this.editCodigoCurso.ReadOnly = false;
+            this.editCodigoCurso.Size = new System.Drawing.Size(231, 25);
+            this.editCodigoCurso.Style = MetroSet_UI.Design.Style.Dark;
+            this.editCodigoCurso.StyleManager = null;
+            this.editCodigoCurso.TabIndex = 39;
+            this.editCodigoCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.editCodigoCurso.ThemeAuthor = "Narwin";
+            this.editCodigoCurso.ThemeName = "MetroDark";
+            this.editCodigoCurso.UseSystemPasswordChar = false;
+            this.editCodigoCurso.WatermarkText = "";
+            // 
             // cmbSexo
             // 
-            this.cmbSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.cmbSexo.ForeColor = System.Drawing.Color.White;
+            this.cmbSexo.AllowDrop = true;
+            this.cmbSexo.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbSexo.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSexo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.cmbSexo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbSexo.CausesValidation = false;
+            this.cmbSexo.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.cmbSexo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbSexo.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbSexo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.ItemHeight = 20;
             this.cmbSexo.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cmbSexo.Location = new System.Drawing.Point(490, 102);
+            this.cmbSexo.Location = new System.Drawing.Point(323, 97);
             this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(121, 21);
-            this.cmbSexo.TabIndex = 37;
+            this.cmbSexo.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmbSexo.SelectedItemForeColor = System.Drawing.Color.White;
+            this.cmbSexo.Size = new System.Drawing.Size(121, 26);
+            this.cmbSexo.Style = MetroSet_UI.Design.Style.Dark;
+            this.cmbSexo.StyleManager = null;
+            this.cmbSexo.TabIndex = 40;
+            this.cmbSexo.ThemeAuthor = "Narwin";
+            this.cmbSexo.ThemeName = "MetroDark";
             // 
             // cmbEstado
             // 
-            this.cmbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.cmbEstado.ForeColor = System.Drawing.Color.White;
+            this.cmbEstado.AllowDrop = true;
+            this.cmbEstado.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbEstado.BackColor = System.Drawing.Color.Transparent;
+            this.cmbEstado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.cmbEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbEstado.CausesValidation = false;
+            this.cmbEstado.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.cmbEstado.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbEstado.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.ItemHeight = 20;
             this.cmbEstado.Items.AddRange(new object[] {
             "GO",
             "DF",
             "RJ",
             "SP",
-            "TO",
+            "BH",
             "AC"});
-            this.cmbEstado.Location = new System.Drawing.Point(490, 283);
+            this.cmbEstado.Location = new System.Drawing.Point(323, 256);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(121, 21);
-            this.cmbEstado.TabIndex = 38;
-            // 
-            // cmbCurso
-            // 
-            this.cmbCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.cmbCurso.ForeColor = System.Drawing.Color.White;
-            this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Location = new System.Drawing.Point(48, 370);
-            this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(570, 21);
-            this.cmbCurso.TabIndex = 39;
+            this.cmbEstado.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmbEstado.SelectedItemForeColor = System.Drawing.Color.White;
+            this.cmbEstado.Size = new System.Drawing.Size(121, 26);
+            this.cmbEstado.Style = MetroSet_UI.Design.Style.Dark;
+            this.cmbEstado.StyleManager = null;
+            this.cmbEstado.TabIndex = 41;
+            this.cmbEstado.ThemeAuthor = "Narwin";
+            this.cmbEstado.ThemeName = "MetroDark";
             // 
             // frmIncluirAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(722, 554);
-            this.Controls.Add(this.cmbCurso);
+            this.ClientSize = new System.Drawing.Size(722, 580);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.cmbSexo);
+            this.Controls.Add(this.editCodigoCurso);
             this.Controls.Add(this.lblCurso);
-            this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.txtSetor);
+            this.Controls.Add(this.editCidade);
+            this.Controls.Add(this.editSetor);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.lblSetor);
-            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.editNumero);
             this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.txtLogradouro);
+            this.Controls.Add(this.editLogradouro);
             this.Controls.Add(this.lblLogradouro);
-            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.editNome);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblTextIncluirAluno);
@@ -460,19 +512,19 @@
         private MetroSet_UI.Controls.MetroSetLabel lblTextIncluirAluno;
         private MetroSet_UI.Controls.MetroSetLabel lblNome;
         private MetroSet_UI.Controls.MetroSetLabel lblSexo;
-        private MetroSet_UI.Controls.MetroSetTextBox txtNome;
+        private MetroSet_UI.Controls.MetroSetTextBox editNome;
         private MetroSet_UI.Controls.MetroSetLabel lblLogradouro;
-        private MetroSet_UI.Controls.MetroSetTextBox txtLogradouro;
+        private MetroSet_UI.Controls.MetroSetTextBox editLogradouro;
         private MetroSet_UI.Controls.MetroSetLabel lblNumero;
-        private MetroSet_UI.Controls.MetroSetTextBox txtNumero;
+        private MetroSet_UI.Controls.MetroSetTextBox editNumero;
         private MetroSet_UI.Controls.MetroSetLabel lblSetor;
         private MetroSet_UI.Controls.MetroSetLabel lblCidade;
         private MetroSet_UI.Controls.MetroSetLabel lblEstado;
-        private MetroSet_UI.Controls.MetroSetTextBox txtSetor;
-        private MetroSet_UI.Controls.MetroSetTextBox txtCidade;
+        private MetroSet_UI.Controls.MetroSetTextBox editSetor;
+        private MetroSet_UI.Controls.MetroSetTextBox editCidade;
         private MetroSet_UI.Controls.MetroSetLabel lblCurso;
-        private System.Windows.Forms.ComboBox cmbSexo;
-        private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.ComboBox cmbCurso;
+        private MetroSet_UI.Controls.MetroSetTextBox editCodigoCurso;
+        private MetroSet_UI.Controls.MetroSetComboBox cmbSexo;
+        private MetroSet_UI.Controls.MetroSetComboBox cmbEstado;
     }
 }

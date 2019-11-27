@@ -9,21 +9,26 @@ namespace Trabalho_4 {
         }
 
         private void btnLimpar_Click(object sender, EventArgs e) {
-            foreach(Control c in Controls) {
-                if(c is MetroSet_UI.Controls.MetroSetTextBox) {
+            foreach (Control c in Controls) {
+                if (c is MetroSet_UI.Controls.MetroSetTextBox || c is MetroSet_UI.Controls.MetroSetComboBox) {
                     c.Text = "";
                 }
             }
         }
 
         private void btnSalvarCurso_Click(object sender, EventArgs e) {
-            MySqlCommand comando = Session.Instance.conexao.CreateCommand();
-            comando.CommandText = "Insert into curso (nome,area,preco_total)" +
-                "values (@nome,@area,@preco_total)";
-            comando.Parameters.AddWithValue("nome", txtNomeCurso.Text);
-            comando.Parameters.AddWithValue("area", cmbArea.Text.Substring(0,1));
-            comando.Parameters.AddWithValue("preco_total",Convert.ToDecimal(txtPrecoCurso.Text));
-            comando.ExecuteNonQuery();
+            try {
+                MySqlCommand comando = Session.Instance.conexao.CreateCommand();
+                comando.CommandText = "Insert into curso (nome,area,preco_total)" +
+                    "values (@nome,@area,@preco_total)";
+                comando.Parameters.AddWithValue("nome", Convert.ToString(txtNomeCurso.Text));
+                comando.Parameters.AddWithValue("area", cmbArea.Text.Substring(0, 1));
+                comando.Parameters.AddWithValue("preco_total", Convert.ToDecimal(txtPrecoCurso.Text));
+                comando.ExecuteNonQuery();
+            } catch (Exception) {
+                MessageBox.Show("Erro ao inserir curso", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

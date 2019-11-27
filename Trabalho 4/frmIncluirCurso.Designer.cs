@@ -32,7 +32,7 @@
             this.btnSalvarCurso = new MetroSet_UI.Controls.MetroSetButton();
             this.btnCancelar = new MetroSet_UI.Controls.MetroSetButton();
             this.btnLimpar = new MetroSet_UI.Controls.MetroSetButton();
-            this.cmbArea = new System.Windows.Forms.ComboBox();
+            this.cmbArea = new MetroSet_UI.Controls.MetroSetComboBox();
             this.SuspendLayout();
             // 
             // lblTituloIncluirCurso
@@ -62,7 +62,7 @@
             this.lblArea.AutoSize = true;
             this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArea.ForeColor = System.Drawing.Color.White;
-            this.lblArea.Location = new System.Drawing.Point(242, 161);
+            this.lblArea.Location = new System.Drawing.Point(242, 151);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(112, 20);
             this.lblArea.TabIndex = 2;
@@ -101,7 +101,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(242, 229);
+            this.label1.Location = new System.Drawing.Point(242, 214);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 5;
@@ -120,7 +120,7 @@
             this.txtPrecoCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.txtPrecoCurso.Image = null;
             this.txtPrecoCurso.Lines = null;
-            this.txtPrecoCurso.Location = new System.Drawing.Point(380, 229);
+            this.txtPrecoCurso.Location = new System.Drawing.Point(380, 214);
             this.txtPrecoCurso.MaxLength = 32767;
             this.txtPrecoCurso.Multiline = false;
             this.txtPrecoCurso.Name = "txtPrecoCurso";
@@ -144,7 +144,7 @@
             this.btnSalvarCurso.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnSalvarCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnSalvarCurso.HoverTextColor = System.Drawing.Color.White;
-            this.btnSalvarCurso.Location = new System.Drawing.Point(172, 302);
+            this.btnSalvarCurso.Location = new System.Drawing.Point(182, 301);
             this.btnSalvarCurso.Name = "btnSalvarCurso";
             this.btnSalvarCurso.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnSalvarCurso.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
@@ -152,7 +152,7 @@
             this.btnSalvarCurso.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnSalvarCurso.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnSalvarCurso.PressTextColor = System.Drawing.Color.White;
-            this.btnSalvarCurso.Size = new System.Drawing.Size(78, 26);
+            this.btnSalvarCurso.Size = new System.Drawing.Size(83, 31);
             this.btnSalvarCurso.Style = MetroSet_UI.Design.Style.Custom;
             this.btnSalvarCurso.StyleManager = null;
             this.btnSalvarCurso.TabIndex = 7;
@@ -170,7 +170,7 @@
             this.btnCancelar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnCancelar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnCancelar.HoverTextColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(595, 302);
+            this.btnCancelar.Location = new System.Drawing.Point(605, 301);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnCancelar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
@@ -178,7 +178,7 @@
             this.btnCancelar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnCancelar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnCancelar.PressTextColor = System.Drawing.Color.White;
-            this.btnCancelar.Size = new System.Drawing.Size(78, 26);
+            this.btnCancelar.Size = new System.Drawing.Size(83, 31);
             this.btnCancelar.Style = MetroSet_UI.Design.Style.Custom;
             this.btnCancelar.StyleManager = null;
             this.btnCancelar.TabIndex = 8;
@@ -195,7 +195,7 @@
             this.btnLimpar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnLimpar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnLimpar.HoverTextColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(382, 302);
+            this.btnLimpar.Location = new System.Drawing.Point(392, 301);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnLimpar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
@@ -203,7 +203,7 @@
             this.btnLimpar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnLimpar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnLimpar.PressTextColor = System.Drawing.Color.White;
-            this.btnLimpar.Size = new System.Drawing.Size(78, 26);
+            this.btnLimpar.Size = new System.Drawing.Size(83, 31);
             this.btnLimpar.Style = MetroSet_UI.Design.Style.Custom;
             this.btnLimpar.StyleManager = null;
             this.btnLimpar.TabIndex = 9;
@@ -214,18 +214,30 @@
             // 
             // cmbArea
             // 
-            this.cmbArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.cmbArea.ForeColor = System.Drawing.Color.White;
+            this.cmbArea.AllowDrop = true;
+            this.cmbArea.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbArea.BackColor = System.Drawing.Color.Transparent;
+            this.cmbArea.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.cmbArea.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbArea.CausesValidation = false;
+            this.cmbArea.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.cmbArea.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbArea.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Items.AddRange(new object[] {
-            "",
-            "Exatas",
-            "Humanas",
-            "Biologicas"});
-            this.cmbArea.Location = new System.Drawing.Point(380, 163);
+            this.cmbArea.ItemHeight = 20;
+            this.cmbArea.Location = new System.Drawing.Point(380, 149);
             this.cmbArea.Name = "cmbArea";
-            this.cmbArea.Size = new System.Drawing.Size(135, 21);
-            this.cmbArea.TabIndex = 39;
+            this.cmbArea.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmbArea.SelectedItemForeColor = System.Drawing.Color.White;
+            this.cmbArea.Size = new System.Drawing.Size(135, 26);
+            this.cmbArea.Style = MetroSet_UI.Design.Style.Dark;
+            this.cmbArea.StyleManager = null;
+            this.cmbArea.TabIndex = 10;
+            this.cmbArea.ThemeAuthor = "Narwin";
+            this.cmbArea.ThemeName = "MetroDark";
             // 
             // frmIncluirCurso
             // 
@@ -261,6 +273,6 @@
         private MetroSet_UI.Controls.MetroSetButton btnSalvarCurso;
         private MetroSet_UI.Controls.MetroSetButton btnCancelar;
         private MetroSet_UI.Controls.MetroSetButton btnLimpar;
-        private System.Windows.Forms.ComboBox cmbArea;
+        private MetroSet_UI.Controls.MetroSetComboBox cmbArea;
     }
 }

@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.lblExcluir = new System.Windows.Forms.Label();
-            this.txtExcluirCurso = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.editExcluirCurso = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblTituloExcluiAluno = new System.Windows.Forms.Label();
             this.btnExcluirCurso = new MetroSet_UI.Controls.MetroSetButton();
             this.btnCancelar = new MetroSet_UI.Controls.MetroSetButton();
@@ -43,33 +43,33 @@
             this.lblExcluir.TabIndex = 2;
             this.lblExcluir.Text = "Digite o ID do curso que deseja excluir: ";
             // 
-            // txtExcluirCurso
+            // editExcluirCurso
             // 
-            this.txtExcluirCurso.AutoCompleteCustomSource = null;
-            this.txtExcluirCurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtExcluirCurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtExcluirCurso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.txtExcluirCurso.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtExcluirCurso.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtExcluirCurso.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtExcluirCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtExcluirCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtExcluirCurso.Image = null;
-            this.txtExcluirCurso.Lines = null;
-            this.txtExcluirCurso.Location = new System.Drawing.Point(401, 82);
-            this.txtExcluirCurso.MaxLength = 32767;
-            this.txtExcluirCurso.Multiline = false;
-            this.txtExcluirCurso.Name = "txtExcluirCurso";
-            this.txtExcluirCurso.ReadOnly = false;
-            this.txtExcluirCurso.Size = new System.Drawing.Size(62, 27);
-            this.txtExcluirCurso.Style = MetroSet_UI.Design.Style.Dark;
-            this.txtExcluirCurso.StyleManager = null;
-            this.txtExcluirCurso.TabIndex = 3;
-            this.txtExcluirCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtExcluirCurso.ThemeAuthor = "Narwin";
-            this.txtExcluirCurso.ThemeName = "MetroDark";
-            this.txtExcluirCurso.UseSystemPasswordChar = false;
-            this.txtExcluirCurso.WatermarkText = "";
+            this.editExcluirCurso.AutoCompleteCustomSource = null;
+            this.editExcluirCurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.editExcluirCurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.editExcluirCurso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.editExcluirCurso.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.editExcluirCurso.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editExcluirCurso.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editExcluirCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.editExcluirCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.editExcluirCurso.Image = null;
+            this.editExcluirCurso.Lines = null;
+            this.editExcluirCurso.Location = new System.Drawing.Point(401, 82);
+            this.editExcluirCurso.MaxLength = 32767;
+            this.editExcluirCurso.Multiline = false;
+            this.editExcluirCurso.Name = "editExcluirCurso";
+            this.editExcluirCurso.ReadOnly = false;
+            this.editExcluirCurso.Size = new System.Drawing.Size(78, 27);
+            this.editExcluirCurso.Style = MetroSet_UI.Design.Style.Dark;
+            this.editExcluirCurso.StyleManager = null;
+            this.editExcluirCurso.TabIndex = 3;
+            this.editExcluirCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.editExcluirCurso.ThemeAuthor = "Narwin";
+            this.editExcluirCurso.ThemeName = "MetroDark";
+            this.editExcluirCurso.UseSystemPasswordChar = false;
+            this.editExcluirCurso.WatermarkText = "";
             // 
             // lblTituloExcluiAluno
             // 
@@ -106,6 +106,7 @@
             this.btnExcluirCurso.Text = "Excluir";
             this.btnExcluirCurso.ThemeAuthor = "Narwin";
             this.btnExcluirCurso.ThemeName = "MetroLite";
+            this.btnExcluirCurso.Click += new System.EventHandler(this.btnExcluirCurso_Click);
             // 
             // btnCancelar
             // 
@@ -135,9 +136,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(83, 184);
+            this.dataGridView1.Location = new System.Drawing.Point(73, 167);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(638, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(666, 228);
             this.dataGridView1.TabIndex = 8;
             // 
             // frmExcluirCurso
@@ -150,7 +151,7 @@
             this.Controls.Add(this.btnExcluirCurso);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblTituloExcluiAluno);
-            this.Controls.Add(this.txtExcluirCurso);
+            this.Controls.Add(this.editExcluirCurso);
             this.Controls.Add(this.lblExcluir);
             this.Name = "frmExcluirCurso";
             this.Text = "frmExcluirCurso";
@@ -163,7 +164,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblExcluir;
-        private MetroSet_UI.Controls.MetroSetTextBox txtExcluirCurso;
+        private MetroSet_UI.Controls.MetroSetTextBox editExcluirCurso;
         private System.Windows.Forms.Label lblTituloExcluiAluno;
         private MetroSet_UI.Controls.MetroSetButton btnExcluirCurso;
         private MetroSet_UI.Controls.MetroSetButton btnCancelar;
