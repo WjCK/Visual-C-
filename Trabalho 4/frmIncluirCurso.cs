@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MetroSet_UI.Forms;
 
 namespace Trabalho_4 {
     public partial class frmIncluirCurso : Form {
@@ -9,11 +10,7 @@ namespace Trabalho_4 {
         }
 
         private void btnLimpar_Click(object sender, EventArgs e) {
-            foreach (Control c in Controls) {
-                if (c is MetroSet_UI.Controls.MetroSetTextBox || c is MetroSet_UI.Controls.MetroSetComboBox) {
-                    c.Text = "";
-                }
-            }
+            limpar();
         }
 
         private void btnSalvarCurso_Click(object sender, EventArgs e) {
@@ -25,10 +22,18 @@ namespace Trabalho_4 {
                 comando.Parameters.AddWithValue("area", cmbArea.Text.Substring(0, 1));
                 comando.Parameters.AddWithValue("preco_total", Convert.ToDecimal(txtPrecoCurso.Text));
                 comando.ExecuteNonQuery();
+                limpar();
             } catch (Exception) {
                 MessageBox.Show("Erro ao inserir curso", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+        }
+        private void limpar() {
+            foreach (Control c in Controls) {
+                if (c is MetroSet_UI.Controls.MetroSetTextBox || c is MetroSet_UI.Controls.MetroSetComboBox) {
+                    c.Text = "";
+                }
+            }
+            cmbArea.SelectedIndex = -1;
         }
     }
 }

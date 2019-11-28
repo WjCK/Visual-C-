@@ -244,6 +244,7 @@
             this.txtSenha.Style = MetroSet_UI.Design.Style.Light;
             this.txtSenha.StyleManager = null;
             this.txtSenha.TabIndex = 17;
+            this.txtSenha.Text = "123";
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSenha.ThemeAuthor = "Narwin";
             this.txtSenha.ThemeName = "MetroLite";
@@ -288,6 +289,7 @@
             this.txtBanco.Style = MetroSet_UI.Design.Style.Light;
             this.txtBanco.StyleManager = null;
             this.txtBanco.TabIndex = 15;
+            this.txtBanco.Text = "academico";
             this.txtBanco.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBanco.ThemeAuthor = "Narwin";
             this.txtBanco.ThemeName = "MetroLite";
@@ -318,6 +320,7 @@
             this.txtUsuario.Style = MetroSet_UI.Design.Style.Light;
             this.txtUsuario.StyleManager = null;
             this.txtUsuario.TabIndex = 16;
+            this.txtUsuario.Text = "root";
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsuario.ThemeAuthor = "Narwin";
             this.txtUsuario.ThemeName = "MetroLite";

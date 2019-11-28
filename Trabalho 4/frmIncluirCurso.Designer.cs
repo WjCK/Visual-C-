@@ -228,6 +228,10 @@
             this.cmbArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbArea.FormattingEnabled = true;
             this.cmbArea.ItemHeight = 20;
+            this.cmbArea.Items.AddRange(new object[] {
+            "Exatas",
+            "Humanas",
+            "Biologicas"});
             this.cmbArea.Location = new System.Drawing.Point(380, 149);
             this.cmbArea.Name = "cmbArea";
             this.cmbArea.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
