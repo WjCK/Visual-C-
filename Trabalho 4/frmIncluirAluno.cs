@@ -14,8 +14,12 @@ namespace Trabalho_4 {
 
         private void btnLimpar_Click(object sender, EventArgs e) {
             foreach (Control c in Controls) {
-                if (c is MetroSet_UI.Controls.MetroSetTextBox || c is MetroSet_UI.Controls.MetroSetComboBox) {
+                if (c is MetroSet_UI.Controls.MetroSetTextBox) {
                     c.Text = "";
+                }
+                if (c is MetroSet_UI.Controls.MetroSetComboBox) {
+                    cmbEstado.SelectedIndex = -1;
+                    cmbSexo.SelectedIndex = -1;
                 }
             }
         }

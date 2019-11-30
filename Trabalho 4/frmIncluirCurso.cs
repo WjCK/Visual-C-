@@ -29,11 +29,14 @@ namespace Trabalho_4 {
         }
         private void limpar() {
             foreach (Control c in Controls) {
-                if (c is MetroSet_UI.Controls.MetroSetTextBox || c is MetroSet_UI.Controls.MetroSetComboBox) {
+                if (c is MetroSet_UI.Controls.MetroSetTextBox) {
                     c.Text = "";
                 }
+                if (c is MetroSet_UI.Controls.MetroSetComboBox) {
+                    cmbArea.SelectedIndex = -1;
+                }
             }
-            cmbArea.SelectedIndex = -1;
+            
         }
     }
 }
