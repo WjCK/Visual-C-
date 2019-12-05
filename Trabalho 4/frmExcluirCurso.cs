@@ -10,11 +10,13 @@ namespace Trabalho_4 {
 
         private void btnExcluirCurso_Click(object sender, EventArgs e) {
             try {
+                Session.Instance.conexao.Open();
                 MySqlCommand comando = Session.Instance.conexao.CreateCommand();
                 String sql = "DELETE FROM curso WHERE codigo = @codigo";
                 comando.CommandText = sql;
                 comando.Parameters.AddWithValue("codigo", Convert.ToInt32(editExcluirCurso.Text));
                 comando.ExecuteNonQuery();
+                Session.Instance.conexao.Close();
             } catch (Exception) {
                 MessageBox.Show("Erro ao excluir curso", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

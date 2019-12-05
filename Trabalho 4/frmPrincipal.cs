@@ -95,6 +95,7 @@ namespace Trabalho_4 {
             Session.Instance.conexao = new MySqlConnection(caminho);
             try {
                 Session.Instance.conexao.Open();
+                Session.Instance.conexao.Close();
                 return true;
             } catch (Exception) {
                 return false;

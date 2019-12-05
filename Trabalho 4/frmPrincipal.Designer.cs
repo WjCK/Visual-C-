@@ -27,6 +27,7 @@
             System.Windows.Forms.Label lblExcluir;
             MetroSet_UI.Controls.MetroDefaultSetButton conectar;
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAcademico));
             this.menuPrincipal = new System.Windows.Forms.MenuStrip();
             this.alunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -244,7 +245,7 @@
             this.txtSenha.Style = MetroSet_UI.Design.Style.Light;
             this.txtSenha.StyleManager = null;
             this.txtSenha.TabIndex = 17;
-            this.txtSenha.Text = "123";
+            this.txtSenha.Text = "drug1";
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSenha.ThemeAuthor = "Narwin";
             this.txtSenha.ThemeName = "MetroLite";
@@ -331,6 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuPrincipal);

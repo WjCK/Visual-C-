@@ -23,6 +23,7 @@ namespace Trabalho_4 {
                 comando.Parameters.AddWithValue("preco_total", Convert.ToDecimal(txtPrecoCurso.Text));
                 comando.ExecuteNonQuery();
                 limpar();
+                Session.Instance.conexao.Close();
             } catch (Exception) {
                 MessageBox.Show("Erro ao inserir curso", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

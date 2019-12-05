@@ -28,8 +28,17 @@
             this.editExcluir = new MetroSet_UI.Controls.MetroSetTextBox();
             this.btnCancelar = new MetroSet_UI.Controls.MetroSetButton();
             this.btnExcluir = new MetroSet_UI.Controls.MetroSetButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabelaAluno = new System.Windows.Forms.DataGridView();
+            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Logradouro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Setor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaAluno)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloExcluiAluno
@@ -134,21 +143,85 @@
             this.btnExcluir.ThemeName = "MetroLite";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // dataGridView1
+            // tabelaAluno
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(684, 239);
-            this.dataGridView1.TabIndex = 6;
+            this.tabelaAluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaAluno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Matricula,
+            this.Nome,
+            this.Sexo,
+            this.Logradouro,
+            this.Numero,
+            this.Setor,
+            this.Cidade,
+            this.UF,
+            this.Codigo_Curso});
+            this.tabelaAluno.Location = new System.Drawing.Point(20, 137);
+            this.tabelaAluno.Name = "tabelaAluno";
+            this.tabelaAluno.Size = new System.Drawing.Size(943, 239);
+            this.tabelaAluno.TabIndex = 6;
+            // 
+            // Matricula
+            // 
+            this.Matricula.DataPropertyName = "matricula";
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.Name = "Matricula";
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Sexo
+            // 
+            this.Sexo.DataPropertyName = "sexo";
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            // 
+            // Logradouro
+            // 
+            this.Logradouro.DataPropertyName = "logradouro";
+            this.Logradouro.HeaderText = "Logradouro";
+            this.Logradouro.Name = "Logradouro";
+            // 
+            // Numero
+            // 
+            this.Numero.DataPropertyName = "numero";
+            this.Numero.HeaderText = "Numero";
+            this.Numero.Name = "Numero";
+            // 
+            // Setor
+            // 
+            this.Setor.DataPropertyName = "setor";
+            this.Setor.HeaderText = "Setor";
+            this.Setor.Name = "Setor";
+            // 
+            // Cidade
+            // 
+            this.Cidade.DataPropertyName = "cidade";
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            // 
+            // UF
+            // 
+            this.UF.DataPropertyName = "uf";
+            this.UF.HeaderText = "UF";
+            this.UF.Name = "UF";
+            // 
+            // Codigo_Curso
+            // 
+            this.Codigo_Curso.DataPropertyName = "codigo_curso";
+            this.Codigo_Curso.HeaderText = "Codigo_Curso";
+            this.Codigo_Curso.Name = "Codigo_Curso";
             // 
             // frmExcluirAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(985, 450);
+            this.Controls.Add(this.tabelaAluno);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.editExcluir);
@@ -156,7 +229,7 @@
             this.Controls.Add(this.lblTituloExcluiAluno);
             this.Name = "frmExcluirAluno";
             this.Text = "Excluir Aluno";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaAluno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +242,15 @@
         private MetroSet_UI.Controls.MetroSetTextBox editExcluir;
         private MetroSet_UI.Controls.MetroSetButton btnCancelar;
         private MetroSet_UI.Controls.MetroSetButton btnExcluir;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tabelaAluno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Logradouro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Setor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Curso;
     }
 }

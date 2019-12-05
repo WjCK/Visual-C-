@@ -40,9 +40,9 @@
             this.editSetor = new MetroSet_UI.Controls.MetroSetTextBox();
             this.editCidade = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblCurso = new MetroSet_UI.Controls.MetroSetLabel();
-            this.editCodigoCurso = new MetroSet_UI.Controls.MetroSetTextBox();
             this.cmbSexo = new MetroSet_UI.Controls.MetroSetComboBox();
             this.cmbEstado = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.cmbCurso = new MetroSet_UI.Controls.MetroSetComboBox();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -376,37 +376,9 @@
             this.lblCurso.Style = MetroSet_UI.Design.Style.Dark;
             this.lblCurso.StyleManager = null;
             this.lblCurso.TabIndex = 34;
-            this.lblCurso.Text = "Código do curso";
+            this.lblCurso.Text = "Curso";
             this.lblCurso.ThemeAuthor = "Narwin";
             this.lblCurso.ThemeName = "MetroDark";
-            // 
-            // editCodigoCurso
-            // 
-            this.editCodigoCurso.AutoCompleteCustomSource = null;
-            this.editCodigoCurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.editCodigoCurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.editCodigoCurso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.editCodigoCurso.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.editCodigoCurso.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.editCodigoCurso.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.editCodigoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.editCodigoCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.editCodigoCurso.Image = null;
-            this.editCodigoCurso.Lines = null;
-            this.editCodigoCurso.Location = new System.Drawing.Point(48, 420);
-            this.editCodigoCurso.MaxLength = 32767;
-            this.editCodigoCurso.Multiline = false;
-            this.editCodigoCurso.Name = "editCodigoCurso";
-            this.editCodigoCurso.ReadOnly = false;
-            this.editCodigoCurso.Size = new System.Drawing.Size(231, 25);
-            this.editCodigoCurso.Style = MetroSet_UI.Design.Style.Dark;
-            this.editCodigoCurso.StyleManager = null;
-            this.editCodigoCurso.TabIndex = 39;
-            this.editCodigoCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.editCodigoCurso.ThemeAuthor = "Narwin";
-            this.editCodigoCurso.ThemeName = "MetroDark";
-            this.editCodigoCurso.UseSystemPasswordChar = false;
-            this.editCodigoCurso.WatermarkText = "";
             // 
             // cmbSexo
             // 
@@ -472,15 +444,49 @@
             this.cmbEstado.ThemeAuthor = "Narwin";
             this.cmbEstado.ThemeName = "MetroDark";
             // 
+            // cmbCurso
+            // 
+            this.cmbCurso.AllowDrop = true;
+            this.cmbCurso.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbCurso.BackColor = System.Drawing.Color.Transparent;
+            this.cmbCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.cmbCurso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbCurso.CausesValidation = false;
+            this.cmbCurso.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.cmbCurso.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbCurso.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbCurso.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.ItemHeight = 20;
+            this.cmbCurso.Items.AddRange(new object[] {
+            "GO",
+            "DF",
+            "RJ",
+            "SP",
+            "BH",
+            "AC"});
+            this.cmbCurso.Location = new System.Drawing.Point(48, 420);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmbCurso.SelectedItemForeColor = System.Drawing.Color.White;
+            this.cmbCurso.Size = new System.Drawing.Size(231, 26);
+            this.cmbCurso.Style = MetroSet_UI.Design.Style.Dark;
+            this.cmbCurso.StyleManager = null;
+            this.cmbCurso.TabIndex = 42;
+            this.cmbCurso.ThemeAuthor = "Narwin";
+            this.cmbCurso.ThemeName = "MetroDark";
+            // 
             // frmIncluirAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(722, 580);
+            this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.cmbSexo);
-            this.Controls.Add(this.editCodigoCurso);
             this.Controls.Add(this.lblCurso);
             this.Controls.Add(this.editCidade);
             this.Controls.Add(this.editSetor);
@@ -501,6 +507,7 @@
             this.Name = "frmIncluirAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAlunoIncluir";
+            this.Load += new System.EventHandler(this.frmIncluirAluno_Load);
             this.ResumeLayout(false);
 
         }
@@ -523,8 +530,8 @@
         private MetroSet_UI.Controls.MetroSetTextBox editSetor;
         private MetroSet_UI.Controls.MetroSetTextBox editCidade;
         private MetroSet_UI.Controls.MetroSetLabel lblCurso;
-        private MetroSet_UI.Controls.MetroSetTextBox editCodigoCurso;
         private MetroSet_UI.Controls.MetroSetComboBox cmbSexo;
         private MetroSet_UI.Controls.MetroSetComboBox cmbEstado;
+        private MetroSet_UI.Controls.MetroSetComboBox cmbCurso;
     }
 }

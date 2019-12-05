@@ -50,7 +50,7 @@
             this.lblFiltrarNome.AutoSize = true;
             this.lblFiltrarNome.Font = new System.Drawing.Font("Muli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltrarNome.ForeColor = System.Drawing.Color.White;
-            this.lblFiltrarNome.Location = new System.Drawing.Point(188, 79);
+            this.lblFiltrarNome.Location = new System.Drawing.Point(188, 86);
             this.lblFiltrarNome.Name = "lblFiltrarNome";
             this.lblFiltrarNome.Size = new System.Drawing.Size(139, 24);
             this.lblFiltrarNome.TabIndex = 0;
@@ -108,7 +108,7 @@
             this.nome_curso});
             this.dadosAluno.Location = new System.Drawing.Point(28, 397);
             this.dadosAluno.Name = "dadosAluno";
-            this.dadosAluno.Size = new System.Drawing.Size(760, 201);
+            this.dadosAluno.Size = new System.Drawing.Size(744, 201);
             this.dadosAluno.TabIndex = 3;
             // 
             // Matricula
@@ -158,7 +158,7 @@
             this.lblFiltrarCurso.AutoSize = true;
             this.lblFiltrarCurso.Font = new System.Drawing.Font("Muli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltrarCurso.ForeColor = System.Drawing.Color.White;
-            this.lblFiltrarCurso.Location = new System.Drawing.Point(188, 136);
+            this.lblFiltrarCurso.Location = new System.Drawing.Point(190, 143);
             this.lblFiltrarCurso.Name = "lblFiltrarCurso";
             this.lblFiltrarCurso.Size = new System.Drawing.Size(137, 24);
             this.lblFiltrarCurso.TabIndex = 4;
@@ -276,7 +276,7 @@
             this.lblFiltrarSetor.AutoSize = true;
             this.lblFiltrarSetor.Font = new System.Drawing.Font("Muli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltrarSetor.ForeColor = System.Drawing.Color.White;
-            this.lblFiltrarSetor.Location = new System.Drawing.Point(188, 194);
+            this.lblFiltrarSetor.Location = new System.Drawing.Point(190, 201);
             this.lblFiltrarSetor.Name = "lblFiltrarSetor";
             this.lblFiltrarSetor.Size = new System.Drawing.Size(134, 24);
             this.lblFiltrarSetor.TabIndex = 8;
@@ -315,7 +315,7 @@
             this.lblFiltrarSexo.AutoSize = true;
             this.lblFiltrarSexo.Font = new System.Drawing.Font("Muli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltrarSexo.ForeColor = System.Drawing.Color.White;
-            this.lblFiltrarSexo.Location = new System.Drawing.Point(188, 247);
+            this.lblFiltrarSexo.Location = new System.Drawing.Point(188, 254);
             this.lblFiltrarSexo.Name = "lblFiltrarSexo";
             this.lblFiltrarSexo.Size = new System.Drawing.Size(130, 24);
             this.lblFiltrarSexo.TabIndex = 10;
