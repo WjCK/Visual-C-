@@ -22,7 +22,7 @@ public sealed class Session
     }
 
     /// <summary>
-    /// Propriedade para o ID do usuario
+    /// Propriedade para conexão
     /// </summary>
     public MySqlConnection conexao { get; set; }
 

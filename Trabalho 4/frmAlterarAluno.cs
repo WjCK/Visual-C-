@@ -35,48 +35,62 @@ namespace Trabalho_4 {
                 cmbCurso.ValueMember = "codigo";
                 cmbCurso.DisplayMember = "nome";
             } catch {
-
+                MessageBox.Show("não foi possivel ver");
             }
+            conexao.Close();
         }
 
         private void dadosAluno_MouseDoubleClick(object sender, MouseEventArgs e) {
             editMatricula.Text = dadosAluno.SelectedRows[0].Cells[0].Value.ToString();
             editNome.Text = dadosAluno.SelectedRows[0].Cells[1].Value.ToString();
-            cmbSexo.Text = dadosAluno.SelectedRows[0].Cells[2].Value.ToString();
+
+            if (dadosAluno.SelectedRows[0].Cells[2].Value.Equals("M"))
+                cmbSexo.Text = "Masculino";
+            else {
+                cmbSexo.Text = "Feminino";
+            }
+
             editLogradouro.Text = dadosAluno.SelectedRows[0].Cells[3].Value.ToString();
-            editSetor.Text = dadosAluno.SelectedRows[0].Cells[4].Value.ToString();
-            editNumero.Text = dadosAluno.SelectedRows[0].Cells[5].Value.ToString();
+            editNumero.Text = dadosAluno.SelectedRows[0].Cells[4].Value.ToString();
+            editSetor.Text = dadosAluno.SelectedRows[0].Cells[5].Value.ToString();
             editCidade.Text = dadosAluno.SelectedRows[0].Cells[6].Value.ToString();
             cmbEstado.Text = dadosAluno.SelectedRows[0].Cells[7].Value.ToString();
+            cmbCurso.DisplayMember = "codigo";
             cmbCurso.Text = dadosAluno.SelectedRows[0].Cells[8].Value.ToString();
+            cmbCurso.DisplayMember = "nome";
+            editMatricula.ReadOnly = true;
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e) {
             MySqlConnection conexao = Session.Instance.conexao;
-            conexao.Close();
             conexao.Open();
             try {
                 MySqlCommand comando = conexao.CreateCommand();
-                String sql = "UPDATE aluno SET nome = @Nome, sexo = @Sexo, " +
-                    "logradouro = @Logradouro, setor = @Setor, numero = @Numero" +
-                    "cidade = @Cidade, estado = @Estado, curso = @Curso WHERE matricula = @Matricula";
+                String sql = "UPDATE aluno SET nome = @Nome," +
+                    " sexo = @Sexo, logradouro = @Logradouro, numero = @Numero," +
+                    " setor = @Setor, cidade = @Cidade, uf = @Estado," +
+                    " codigo_curso = @Curso WHERE matricula =" + editMatricula.Text;
                 comando.CommandText = sql;
 
-                comando.Parameters.AddWithValue("Nome", editNome.Text.Trim());
-                comando.Parameters.AddWithValue("Sexo", cmbSexo.Text.Trim());
-                comando.Parameters.AddWithValue("Logradouro", editLogradouro.Text.Trim());
-                comando.Parameters.AddWithValue("Setor", editSetor.Text.Trim());
-                comando.Parameters.AddWithValue("Numero", editNumero.Text.Trim());
-                comando.Parameters.AddWithValue("Cidade", editCidade.Text.Trim());
-                comando.Parameters.AddWithValue("Estado", cmbEstado.Text.Trim());
-                comando.Parameters.AddWithValue("Curso", cmbCurso.Text.Trim());
+                comando.Parameters.AddWithValue("Nome", editNome.Text);
+                comando.Parameters.AddWithValue("Sexo", cmbSexo.Text.Substring(0,1));
+                comando.Parameters.AddWithValue("Logradouro", editLogradouro.Text);
+                comando.Parameters.AddWithValue("Setor", editSetor.Text);
+                comando.Parameters.AddWithValue("Numero", editNumero.Text);
+                comando.Parameters.AddWithValue("Cidade", editCidade.Text);
+                comando.Parameters.AddWithValue("Estado", cmbEstado.Text);
 
+                cmbCurso.DisplayMember = "codigo";
+                comando.Parameters.AddWithValue("Curso", cmbCurso.Text);
+                cmbCurso.DisplayMember = "nome";
+
+                comando.ExecuteNonQuery();
                 MessageBox.Show("Atualização de informações realizada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conexao.Close();
-                carregarTabela();
             } catch (Exception) {
                 MessageBox.Show("Alguma informação inválida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            conexao.Close();
+            carregarTabela();
         }
     }
 }

@@ -8,10 +8,21 @@ namespace Trabalho_4 {
 
         public frmIncluirAluno() {
             InitializeComponent();
+            DataTable table = new DataTable();
+            try {
+                MySqlDataAdapter dado = new MySqlDataAdapter("SELECT codigo,nome FROM curso", Session.Instance.conexao);
+                dado.Fill(table);
+                cmbCurso.DataSource = table;
+                cmbCurso.ValueMember = "codigo";
+                cmbCurso.DisplayMember = "nome";
+            } catch {
+
+            }
+            Session.Instance.conexao.Close();
         }
 
         private void btnFechar_Click(object sender, EventArgs e) {
-            this.Close();
+           Close();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e) {
@@ -27,6 +38,7 @@ namespace Trabalho_4 {
         }
 
         private void btnSalvar_Click(object sender, EventArgs e) {
+            Session.Instance.conexao.Open();
             if (editNome.Text == "") {
                 MessageBox.Show("O campo NOME está vazio");
             } else if (cmbSexo.Text == "") {
@@ -47,6 +59,7 @@ namespace Trabalho_4 {
                     MySqlCommand comando = Session.Instance.conexao.CreateCommand();
                     comando.CommandText = "INSERT INTO aluno (nome, sexo, logradouro, numero, setor, cidade, uf, codigo_curso)" +
                         " VALUES (@nome, @sexo, @logradouro, @numero, @setor, @cidade, @uf, @codigo_curso);";
+
                     comando.Parameters.AddWithValue("nome", editNome.Text);
                     comando.Parameters.AddWithValue("sexo", cmbSexo.Text.Substring(0,1));
                     comando.Parameters.AddWithValue("logradouro", editLogradouro.Text);
@@ -54,9 +67,11 @@ namespace Trabalho_4 {
                     comando.Parameters.AddWithValue("setor", editSetor.Text);
                     comando.Parameters.AddWithValue("cidade", editCidade.Text);
                     comando.Parameters.AddWithValue("uf", cmbEstado.Text);
+
                     cmbCurso.DisplayMember = "codigo";
                     comando.Parameters.AddWithValue("codigo_curso", cmbCurso.Text);
                     cmbCurso.DisplayMember = "nome";
+
                     comando.ExecuteNonQuery();
 
                     MessageBox.Show("Inserção realizada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -77,23 +92,7 @@ namespace Trabalho_4 {
         }
 
         private void frmIncluirAluno_Load(object sender, EventArgs e) {
-            DataTable table = new DataTable();
-            MySqlConnection conexao = Session.Instance.conexao;
-            conexao.Open();
-            try {
-
             
-            String sql = "SELECT codigo,nome FROM curso";
-            MySqlDataAdapter dado = new MySqlDataAdapter(sql, conexao);
-            dado.Fill(table);
-            cmbCurso.DataSource = table;
-
-            cmbCurso.ValueMember = "codigo";
-            cmbCurso.DisplayMember = "nome";
-            
-            } catch {
-
-            }
         }
     }
 }
