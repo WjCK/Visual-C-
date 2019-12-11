@@ -59,8 +59,8 @@
             this.btnSalvar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnSalvar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnSalvar.NormalTextColor = System.Drawing.Color.White;
-            this.btnSalvar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.btnSalvar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.btnSalvar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnSalvar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnSalvar.PressTextColor = System.Drawing.Color.White;
             this.btnSalvar.Size = new System.Drawing.Size(83, 36);
             this.btnSalvar.Style = MetroSet_UI.Design.Style.Custom;
@@ -85,8 +85,8 @@
             this.btnLimpar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnLimpar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnLimpar.NormalTextColor = System.Drawing.Color.White;
-            this.btnLimpar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.btnLimpar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.btnLimpar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnLimpar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnLimpar.PressTextColor = System.Drawing.Color.White;
             this.btnLimpar.Size = new System.Drawing.Size(83, 36);
             this.btnLimpar.Style = MetroSet_UI.Design.Style.Custom;
@@ -111,8 +111,8 @@
             this.btnFechar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnFechar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnFechar.NormalTextColor = System.Drawing.Color.White;
-            this.btnFechar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.btnFechar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.btnFechar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnFechar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnFechar.PressTextColor = System.Drawing.Color.White;
             this.btnFechar.Size = new System.Drawing.Size(83, 36);
             this.btnFechar.Style = MetroSet_UI.Design.Style.Custom;
@@ -460,13 +460,6 @@
             this.cmbCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbCurso.FormattingEnabled = true;
             this.cmbCurso.ItemHeight = 20;
-            this.cmbCurso.Items.AddRange(new object[] {
-            "GO",
-            "DF",
-            "RJ",
-            "SP",
-            "BH",
-            "AC"});
             this.cmbCurso.Location = new System.Drawing.Point(48, 420);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));

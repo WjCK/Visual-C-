@@ -15,6 +15,7 @@ namespace Trabalho_4 {
 
         private void btnSalvarCurso_Click(object sender, EventArgs e) {
             try {
+                Session.Instance.conexao.Open();
                 MySqlCommand comando = Session.Instance.conexao.CreateCommand();
                 comando.CommandText = "Insert into curso (nome,area,preco_total)" +
                     "values (@nome,@area,@preco_total)";

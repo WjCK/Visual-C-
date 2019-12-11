@@ -36,6 +36,7 @@ namespace Trabalho_4 {
         }
         private void carregarTabela() {
             MySqlConnection conexao = Session.Instance.conexao;
+            conexao.Open();
             try {
                 string sql = "SELECT * FROM aluno";
                 MySqlDataAdapter dadosBD = new MySqlDataAdapter(sql, conexao);
