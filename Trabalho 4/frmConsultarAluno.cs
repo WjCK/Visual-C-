@@ -9,7 +9,7 @@ namespace Trabalho_4 {
         public frmConsultarAluno() {
             InitializeComponent();
             fazerConsulta();
-            carregarCursos("nome");
+            carregarCursos();
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e) {
@@ -24,10 +24,10 @@ namespace Trabalho_4 {
                 if (rbNome.Checked) {
                     query += "where nome like '%" + editFiltrarNome.Text + "%'";
                 }else if (rbCurso.Checked) {
-                    carregarCursos("codigo");
+                    cmbFiltrarCurso.DisplayMember = "codigo";
                     query += "where codigo_curso like '%" + cmbFiltrarCurso.Text + "%'";
-                    carregarCursos("nome");
-                }else if (rbSetor.Checked) {
+                    cmbFiltrarCurso.DisplayMember = "nome";
+                } else if (rbSetor.Checked) {
                     query += "where setor like '%" + editFiltrarSetor.Text + "%'";
                 }else if (rbSexo.Checked) {
                     if (cmbFiltrarSexo.Text.Length != 0)
@@ -48,7 +48,7 @@ namespace Trabalho_4 {
             conexao.Close();
         }
 
-        private void carregarCursos(String member) {
+        private void carregarCursos() {
             String sql = "SELECT codigo,nome FROM curso";
             MySqlDataAdapter dado = new MySqlDataAdapter(sql,Session.Instance.conexao);
             DataTable table = new DataTable();
@@ -56,8 +56,11 @@ namespace Trabalho_4 {
             cmbFiltrarCurso.DataSource = table;
 
             cmbFiltrarCurso.ValueMember = "codigo";
-            cmbFiltrarCurso.DisplayMember = member;
+            cmbFiltrarCurso.DisplayMember = "nome";
         }
 
+        private void btnFechar_Click(object sender, EventArgs e) {
+            Close();
+        }
     }
 }

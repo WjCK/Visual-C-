@@ -185,6 +185,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.ThemeAuthor = "Narwin";
             this.btnCancelar.ThemeName = "MetroDark";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnLimpar
             // 

@@ -500,7 +500,6 @@
             this.Name = "frmIncluirAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAlunoIncluir";
-            this.Load += new System.EventHandler(this.frmIncluirAluno_Load);
             this.ResumeLayout(false);
 
         }

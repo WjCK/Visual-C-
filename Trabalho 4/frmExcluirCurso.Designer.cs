@@ -28,8 +28,12 @@
             this.lblTituloExcluiAluno = new System.Windows.Forms.Label();
             this.btnExcluirCurso = new MetroSet_UI.Controls.MetroSetButton();
             this.btnCancelar = new MetroSet_UI.Controls.MetroSetButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gridCurso = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCurso)).BeginInit();
             this.SuspendLayout();
             // 
             // lblExcluir
@@ -132,14 +136,44 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.ThemeAuthor = "Narwin";
             this.btnCancelar.ThemeName = "MetroLite";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // dataGridView1
+            // gridCurso
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 167);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(666, 228);
-            this.dataGridView1.TabIndex = 8;
+            this.gridCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigo,
+            this.nome,
+            this.area,
+            this.precoTotal});
+            this.gridCurso.Location = new System.Drawing.Point(174, 173);
+            this.gridCurso.Name = "gridCurso";
+            this.gridCurso.Size = new System.Drawing.Size(443, 228);
+            this.gridCurso.TabIndex = 8;
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Código do Curso";
+            this.codigo.Name = "codigo";
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome do Curso";
+            this.nome.Name = "nome";
+            // 
+            // area
+            // 
+            this.area.DataPropertyName = "area";
+            this.area.HeaderText = "Área do Curso";
+            this.area.Name = "area";
+            // 
+            // precoTotal
+            // 
+            this.precoTotal.DataPropertyName = "preco_total";
+            this.precoTotal.HeaderText = "Preço Total";
+            this.precoTotal.Name = "precoTotal";
             // 
             // frmExcluirCurso
             // 
@@ -147,7 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridCurso);
             this.Controls.Add(this.btnExcluirCurso);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblTituloExcluiAluno);
@@ -155,7 +189,7 @@
             this.Controls.Add(this.lblExcluir);
             this.Name = "frmExcluirCurso";
             this.Text = "frmExcluirCurso";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCurso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +202,10 @@
         private System.Windows.Forms.Label lblTituloExcluiAluno;
         private MetroSet_UI.Controls.MetroSetButton btnExcluirCurso;
         private MetroSet_UI.Controls.MetroSetButton btnCancelar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridCurso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn area;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoTotal;
     }
 }

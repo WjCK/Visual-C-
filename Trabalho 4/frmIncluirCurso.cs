@@ -14,20 +14,22 @@ namespace Trabalho_4 {
         }
 
         private void btnSalvarCurso_Click(object sender, EventArgs e) {
+            Session.Instance.conexao.Open();
             try {
-                Session.Instance.conexao.Open();
                 MySqlCommand comando = Session.Instance.conexao.CreateCommand();
                 comando.CommandText = "Insert into curso (nome,area,preco_total)" +
                     "values (@nome,@area,@preco_total)";
-                comando.Parameters.AddWithValue("nome", Convert.ToString(txtNomeCurso.Text));
+                comando.Parameters.AddWithValue("nome", txtNomeCurso.Text);
                 comando.Parameters.AddWithValue("area", cmbArea.Text.Substring(0, 1));
-                comando.Parameters.AddWithValue("preco_total", Convert.ToDecimal(txtPrecoCurso.Text));
+                comando.Parameters.AddWithValue("preco_total", Convert.ToDouble(txtPrecoCurso.Text));
                 comando.ExecuteNonQuery();
+                MessageBox.Show("Inclusão de curso realizada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpar();
-                Session.Instance.conexao.Close();
             } catch (Exception) {
                 MessageBox.Show("Erro ao inserir curso", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Session.Instance.conexao.Close();
+
         }
         private void limpar() {
             foreach (Control c in Controls) {
@@ -39,6 +41,10 @@ namespace Trabalho_4 {
                 }
             }
             
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e) {
+            Close();
         }
     }
 }

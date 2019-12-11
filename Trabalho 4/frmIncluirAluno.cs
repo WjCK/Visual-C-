@@ -8,6 +8,7 @@ namespace Trabalho_4 {
 
         public frmIncluirAluno() {
             InitializeComponent();
+            Session.Instance.conexao.Open();
             DataTable table = new DataTable();
             try {
                 MySqlDataAdapter dado = new MySqlDataAdapter("SELECT codigo,nome FROM curso", Session.Instance.conexao);
@@ -63,7 +64,12 @@ namespace Trabalho_4 {
                     comando.Parameters.AddWithValue("nome", editNome.Text);
                     comando.Parameters.AddWithValue("sexo", cmbSexo.Text.Substring(0,1));
                     comando.Parameters.AddWithValue("logradouro", editLogradouro.Text);
-                    comando.Parameters.AddWithValue("numero", Convert.ToInt32(editNumero.Text));
+                    try {
+                        comando.Parameters.AddWithValue("numero", Convert.ToInt32(editNumero.Text));
+                    } catch {
+                        MessageBox.Show("Apenas digite numeros", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                     comando.Parameters.AddWithValue("setor", editSetor.Text);
                     comando.Parameters.AddWithValue("cidade", editCidade.Text);
                     comando.Parameters.AddWithValue("uf", cmbEstado.Text);
@@ -84,15 +90,11 @@ namespace Trabalho_4 {
                     editCidade.Text = "";
                     cmbEstado.Text = "";
                     cmbCurso.SelectedIndex = -1;
-                    Session.Instance.conexao.Close();
                 } catch (MySqlException) {
                     MessageBox.Show("Alguma informação invalida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                Session.Instance.conexao.Close();
             }
-        }
-
-        private void frmIncluirAluno_Load(object sender, EventArgs e) {
-            
         }
     }
 }

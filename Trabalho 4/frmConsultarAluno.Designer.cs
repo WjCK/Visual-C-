@@ -154,7 +154,7 @@
             // codigo_curso
             // 
             this.codigo_curso.DataPropertyName = "codigo_curso";
-            this.codigo_curso.HeaderText = "Nome do Curso";
+            this.codigo_curso.HeaderText = "Codigo do Curso";
             this.codigo_curso.Name = "codigo_curso";
             // 
             // lblFiltrarCurso
@@ -200,16 +200,16 @@
             this.btnFechar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnFechar.DisabledForeColor = System.Drawing.Color.Gray;
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnFechar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.btnFechar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.btnFechar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnFechar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnFechar.HoverTextColor = System.Drawing.Color.White;
             this.btnFechar.Location = new System.Drawing.Point(458, 322);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnFechar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnFechar.NormalTextColor = System.Drawing.Color.White;
-            this.btnFechar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnFechar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnFechar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnFechar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnFechar.PressTextColor = System.Drawing.Color.White;
             this.btnFechar.Size = new System.Drawing.Size(79, 29);
             this.btnFechar.Style = MetroSet_UI.Design.Style.Custom;
@@ -218,6 +218,7 @@
             this.btnFechar.Text = "Fechar";
             this.btnFechar.ThemeAuthor = "Narwin";
             this.btnFechar.ThemeName = "MetroLite";
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // editFiltrarSetor
             // 
@@ -430,7 +431,6 @@
             this.Controls.Add(this.lblFiltrarNome);
             this.Name = "frmConsultarAluno";
             this.Text = "Consultar Aluno";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dadosAluno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -451,6 +451,10 @@
         private System.Windows.Forms.Label lblFiltrarSexo;
         private MetroSet_UI.Controls.MetroSetComboBox cmbFiltrarCurso;
         private MetroSet_UI.Controls.MetroSetComboBox cmbFiltrarSexo;
+        private MetroSet_UI.Controls.MetroSetRadioButton rbNome;
+        private MetroSet_UI.Controls.MetroSetRadioButton rbCurso;
+        private MetroSet_UI.Controls.MetroSetRadioButton rbSetor;
+        private MetroSet_UI.Controls.MetroSetRadioButton rbSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
@@ -458,9 +462,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn UF;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo_curso;
-        private MetroSet_UI.Controls.MetroSetRadioButton rbNome;
-        private MetroSet_UI.Controls.MetroSetRadioButton rbCurso;
-        private MetroSet_UI.Controls.MetroSetRadioButton rbSetor;
-        private MetroSet_UI.Controls.MetroSetRadioButton rbSexo;
     }
 }

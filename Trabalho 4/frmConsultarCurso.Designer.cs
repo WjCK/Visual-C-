@@ -25,13 +25,18 @@
         private void InitializeComponent() {
             this.btnFechar = new MetroSet_UI.Controls.MetroSetButton();
             this.btnPesquisarCurso = new MetroSet_UI.Controls.MetroSetButton();
-            this.txtFiltrarCurso = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.editFiltrarCurso = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblFiltrarCurso = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTituloConsultar = new System.Windows.Forms.Label();
-            this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gridCurso = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbFiltrarArea = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.btnLimpar = new MetroSet_UI.Controls.MetroSetButton();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCurso)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFechar
@@ -40,16 +45,16 @@
             this.btnFechar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnFechar.DisabledForeColor = System.Drawing.Color.Gray;
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnFechar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.btnFechar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.btnFechar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnFechar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnFechar.HoverTextColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(451, 235);
+            this.btnFechar.Location = new System.Drawing.Point(532, 235);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnFechar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             this.btnFechar.NormalTextColor = System.Drawing.Color.White;
-            this.btnFechar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnFechar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnFechar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnFechar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnFechar.PressTextColor = System.Drawing.Color.White;
             this.btnFechar.Size = new System.Drawing.Size(79, 29);
             this.btnFechar.Style = MetroSet_UI.Design.Style.Custom;
@@ -58,6 +63,7 @@
             this.btnFechar.Text = "Fechar";
             this.btnFechar.ThemeAuthor = "Narwin";
             this.btnFechar.ThemeName = "MetroLite";
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnPesquisarCurso
             // 
@@ -83,34 +89,35 @@
             this.btnPesquisarCurso.Text = "Pesquisar";
             this.btnPesquisarCurso.ThemeAuthor = "Narwin";
             this.btnPesquisarCurso.ThemeName = "MetroLite";
+            this.btnPesquisarCurso.Click += new System.EventHandler(this.btnPesquisarCurso_Click);
             // 
-            // txtFiltrarCurso
+            // editFiltrarCurso
             // 
-            this.txtFiltrarCurso.AutoCompleteCustomSource = null;
-            this.txtFiltrarCurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtFiltrarCurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtFiltrarCurso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.txtFiltrarCurso.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtFiltrarCurso.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtFiltrarCurso.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtFiltrarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtFiltrarCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtFiltrarCurso.Image = null;
-            this.txtFiltrarCurso.Lines = null;
-            this.txtFiltrarCurso.Location = new System.Drawing.Point(329, 108);
-            this.txtFiltrarCurso.MaxLength = 32767;
-            this.txtFiltrarCurso.Multiline = false;
-            this.txtFiltrarCurso.Name = "txtFiltrarCurso";
-            this.txtFiltrarCurso.ReadOnly = false;
-            this.txtFiltrarCurso.Size = new System.Drawing.Size(302, 31);
-            this.txtFiltrarCurso.Style = MetroSet_UI.Design.Style.Dark;
-            this.txtFiltrarCurso.StyleManager = null;
-            this.txtFiltrarCurso.TabIndex = 13;
-            this.txtFiltrarCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtFiltrarCurso.ThemeAuthor = "Narwin";
-            this.txtFiltrarCurso.ThemeName = "MetroDark";
-            this.txtFiltrarCurso.UseSystemPasswordChar = false;
-            this.txtFiltrarCurso.WatermarkText = "";
+            this.editFiltrarCurso.AutoCompleteCustomSource = null;
+            this.editFiltrarCurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.editFiltrarCurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.editFiltrarCurso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.editFiltrarCurso.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.editFiltrarCurso.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editFiltrarCurso.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.editFiltrarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.editFiltrarCurso.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.editFiltrarCurso.Image = null;
+            this.editFiltrarCurso.Lines = null;
+            this.editFiltrarCurso.Location = new System.Drawing.Point(329, 108);
+            this.editFiltrarCurso.MaxLength = 32767;
+            this.editFiltrarCurso.Multiline = false;
+            this.editFiltrarCurso.Name = "editFiltrarCurso";
+            this.editFiltrarCurso.ReadOnly = false;
+            this.editFiltrarCurso.Size = new System.Drawing.Size(302, 31);
+            this.editFiltrarCurso.Style = MetroSet_UI.Design.Style.Dark;
+            this.editFiltrarCurso.StyleManager = null;
+            this.editFiltrarCurso.TabIndex = 13;
+            this.editFiltrarCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.editFiltrarCurso.ThemeAuthor = "Narwin";
+            this.editFiltrarCurso.ThemeName = "MetroDark";
+            this.editFiltrarCurso.UseSystemPasswordChar = false;
+            this.editFiltrarCurso.WatermarkText = "";
             // 
             // lblFiltrarCurso
             // 
@@ -123,14 +130,6 @@
             this.lblFiltrarCurso.TabIndex = 12;
             this.lblFiltrarCurso.Text = "Filtrar por curso:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 298);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(716, 201);
-            this.dataGridView1.TabIndex = 11;
-            // 
             // lblTituloConsultar
             // 
             this.lblTituloConsultar.AutoSize = true;
@@ -141,34 +140,6 @@
             this.lblTituloConsultar.Size = new System.Drawing.Size(197, 35);
             this.lblTituloConsultar.TabIndex = 10;
             this.lblTituloConsultar.Text = "Consultar Curso";
-            // 
-            // metroSetTextBox1
-            // 
-            this.metroSetTextBox1.AutoCompleteCustomSource = null;
-            this.metroSetTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetTextBox1.Image = null;
-            this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(329, 173);
-            this.metroSetTextBox1.MaxLength = 32767;
-            this.metroSetTextBox1.Multiline = false;
-            this.metroSetTextBox1.Name = "metroSetTextBox1";
-            this.metroSetTextBox1.ReadOnly = false;
-            this.metroSetTextBox1.Size = new System.Drawing.Size(302, 31);
-            this.metroSetTextBox1.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox1.StyleManager = null;
-            this.metroSetTextBox1.TabIndex = 17;
-            this.metroSetTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox1.ThemeAuthor = "Narwin";
-            this.metroSetTextBox1.ThemeName = "MetroDark";
-            this.metroSetTextBox1.UseSystemPasswordChar = false;
-            this.metroSetTextBox1.WatermarkText = "";
             // 
             // label1
             // 
@@ -181,23 +152,118 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Filtrar por area:";
             // 
+            // gridCurso
+            // 
+            this.gridCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigo,
+            this.nome,
+            this.area,
+            this.precoTotal});
+            this.gridCurso.Location = new System.Drawing.Point(188, 310);
+            this.gridCurso.Name = "gridCurso";
+            this.gridCurso.Size = new System.Drawing.Size(443, 228);
+            this.gridCurso.TabIndex = 18;
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Código do Curso";
+            this.codigo.Name = "codigo";
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome do Curso";
+            this.nome.Name = "nome";
+            // 
+            // area
+            // 
+            this.area.DataPropertyName = "area";
+            this.area.HeaderText = "Área do Curso";
+            this.area.Name = "area";
+            // 
+            // precoTotal
+            // 
+            this.precoTotal.DataPropertyName = "preco_total";
+            this.precoTotal.HeaderText = "Preço Total";
+            this.precoTotal.Name = "precoTotal";
+            // 
+            // cmbFiltrarArea
+            // 
+            this.cmbFiltrarArea.AllowDrop = true;
+            this.cmbFiltrarArea.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbFiltrarArea.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFiltrarArea.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.cmbFiltrarArea.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cmbFiltrarArea.CausesValidation = false;
+            this.cmbFiltrarArea.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.cmbFiltrarArea.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbFiltrarArea.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbFiltrarArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFiltrarArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltrarArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmbFiltrarArea.FormattingEnabled = true;
+            this.cmbFiltrarArea.ItemHeight = 20;
+            this.cmbFiltrarArea.Items.AddRange(new object[] {
+            "Exatas",
+            "Humanas",
+            "Biologicas"});
+            this.cmbFiltrarArea.Location = new System.Drawing.Point(329, 171);
+            this.cmbFiltrarArea.Name = "cmbFiltrarArea";
+            this.cmbFiltrarArea.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmbFiltrarArea.SelectedItemForeColor = System.Drawing.Color.White;
+            this.cmbFiltrarArea.Size = new System.Drawing.Size(302, 26);
+            this.cmbFiltrarArea.Style = MetroSet_UI.Design.Style.Dark;
+            this.cmbFiltrarArea.StyleManager = null;
+            this.cmbFiltrarArea.TabIndex = 19;
+            this.cmbFiltrarArea.ThemeAuthor = "Narwin";
+            this.cmbFiltrarArea.ThemeName = "MetroDark";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnLimpar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnLimpar.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnLimpar.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnLimpar.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnLimpar.HoverTextColor = System.Drawing.Color.White;
+            this.btnLimpar.Location = new System.Drawing.Point(396, 235);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.btnLimpar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.btnLimpar.NormalTextColor = System.Drawing.Color.White;
+            this.btnLimpar.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnLimpar.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.btnLimpar.PressTextColor = System.Drawing.Color.White;
+            this.btnLimpar.Size = new System.Drawing.Size(79, 29);
+            this.btnLimpar.Style = MetroSet_UI.Design.Style.Custom;
+            this.btnLimpar.StyleManager = null;
+            this.btnLimpar.TabIndex = 20;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.ThemeAuthor = "Narwin";
+            this.btnLimpar.ThemeName = "MetroLite";
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // frmConsultarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(800, 511);
-            this.Controls.Add(this.metroSetTextBox1);
+            this.ClientSize = new System.Drawing.Size(800, 579);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.cmbFiltrarArea);
+            this.Controls.Add(this.gridCurso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnPesquisarCurso);
-            this.Controls.Add(this.txtFiltrarCurso);
+            this.Controls.Add(this.editFiltrarCurso);
             this.Controls.Add(this.lblFiltrarCurso);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblTituloConsultar);
             this.Name = "frmConsultarCurso";
             this.Text = "frmConsultarCurso";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCurso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,11 +273,16 @@
 
         private MetroSet_UI.Controls.MetroSetButton btnFechar;
         private MetroSet_UI.Controls.MetroSetButton btnPesquisarCurso;
-        private MetroSet_UI.Controls.MetroSetTextBox txtFiltrarCurso;
+        private MetroSet_UI.Controls.MetroSetTextBox editFiltrarCurso;
         private System.Windows.Forms.Label lblFiltrarCurso;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblTituloConsultar;
-        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView gridCurso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn area;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoTotal;
+        private MetroSet_UI.Controls.MetroSetComboBox cmbFiltrarArea;
+        private MetroSet_UI.Controls.MetroSetButton btnLimpar;
     }
 }

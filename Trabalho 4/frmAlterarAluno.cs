@@ -8,6 +8,8 @@ namespace Trabalho_4 {
         public frmAlterarAluno() {
             InitializeComponent();
             carregarTabela();
+            MessageBox.Show("Atenção!!!\n\n" +
+                "Clique duas vezes na celula anterior a matricula!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnFechar_Click(object sender, EventArgs e) {
