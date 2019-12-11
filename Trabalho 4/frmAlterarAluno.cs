@@ -35,7 +35,7 @@ namespace Trabalho_4 {
                 cmbCurso.ValueMember = "codigo";
                 cmbCurso.DisplayMember = "nome";
             } catch {
-                MessageBox.Show("não foi possivel ver");
+                MessageBox.Show("Não foi possivel ver");
             }
             conexao.Close();
         }
@@ -69,7 +69,7 @@ namespace Trabalho_4 {
                 String sql = "UPDATE aluno SET nome = @Nome," +
                     " sexo = @Sexo, logradouro = @Logradouro, numero = @Numero," +
                     " setor = @Setor, cidade = @Cidade, uf = @Estado," +
-                    " codigo_curso = @Curso WHERE matricula =" + editMatricula.Text;
+                    " codigo_curso = @Curso WHERE matricula = " + editMatricula.Text;
                 comando.CommandText = sql;
 
                 comando.Parameters.AddWithValue("Nome", editNome.Text);
